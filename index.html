@@ -17,31 +17,30 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="import" href="test_catBush.html">
     <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 
 </head>
 
 <body>
-  
+
   <div class="headerBar">
     <div class="nameBar">
   	  <div class="container">
         <h1>Jameela Huq</h1>
       </div>
     </div>
-    <div class="navBar">
-      <div class="container">
-    	  <h2>
-        <ul>
-    		  <a href="teacher.html">Teacher</a>
-    		  <a href="scientist.html">Scientist</a>
-    		  <a href="musician.html">Musician</a>
-    		  <a href="index.html">Self</a>
-    	  </ul>
-        </h2>
-      </div>
-    </div>
+    <!--<div class="navBar">-->
+      <!--<div class="container">-->
+    	  <!--<h2>-->
+        <!--<ul>-->
+    		  <!--<a href="teacher.html">Teacher</a>-->
+    		  <!--<a href="scientist.html">Scientist</a>-->
+    		  <!--<a href="musician.html">Musician</a>-->
+    		  <!--<a href="index.html">Self</a>-->
+    	  <!--</ul>-->
+        <!--</h2>-->
+      <!--</div>-->
+    <!--</div>-->
   </div> <!-- headerBar -->
 
   <div class ="intro">
@@ -49,62 +48,27 @@
   </div> <!--intro-->
 
 <!--page content -->
-<div class="codeBit" id="catHumanLaser">
-  <h3>2014 October 19</h3> 
-  <span class="update">Last updated: 2014/11/09</span>
-  
-  <div class="buttonPad userChoice">
-    <span>Player</span>
-    <button data-choice="cat">
-      <img src="images/cat.jpg"/>
-      <span class="text">cat</span>
-    </button>
-    <button data-choice="human">
-      <img src="images/human.jpg"/>
-      <span class="text">human</span>
-    </button>
-    <button data-choice="laser">
-      <img src="images/laser.jpg"/>
-      <span class="text">laser</span>
-    </button>
+  <div class="codeBit" id="petPoke">
+    <h3>2015 August 18</h3>
+    <span class="update">Last updated: 2015/08/18</span>
+    <span class="results">Let's not play today. I'm not feeling well...</span>
+    <div><img id="petPic" src="Pet_Poke/images/pusheen-wiggle-sad.gif" alt="pet pic!"/></div>
   </div>
-  
-  <div class="results">
-    <span class="text"></span>
-    <img src=""/>
+
+  <div class="codeBit" id="Flikd">
+    <h3>2015 August 29</h3>
+    <span class="update">Last updated: 2015/08/30</span>
+    <a href="boxes.html"><img src="boxes/pusheen_internet_wiggle.gif"></a>
+    <span class="bitTitle">Let's find photos together!</span>
+
   </div>
-  
-  <div class="buttonPad computerChoice">
-    <span>Opponent</span>
-    <button class="cat">
-      <img src="images/cat.jpg"/>
-      <span class="text">cat</span>
-    </button>
-    <button class="human">
-      <img src="images/human.jpg"/>
-      <span class="text">human</span>
-    </button>
-    <button class="laser">
-      <img src="images/laser.jpg"/>
-      <span class="text">laser</span>
-    </button>
+
+  <div class="codeBit" id="catBush">
+    <h3>2014 March 28</h3>
+    <span class="update">Last updated: 2015/08/27</span>
+    <a href="find_the_cat.html"><img src="Find_the_Cat/fence_with_bushes.png"></a>
+    <span class="bitTitle">Play hide-and-seek with me!</span>
   </div>
-</div> <!--catHumanLaser-->
-
-<div class="codeBit" id="romanNumeral"></div>
-
-<div class="codeBit" id="merryGoRound">
-  <h3>2014 October 20</h3>
-  <span class="update">Last updated: 2014/10/20</span>
-  <button>Spin!</button>
-  <span class="results"></span>
-</div> <!--merryGoRound-->
-
-<div class="codeBit" id="dragonFinder">
-  <h3>2014 October 25</h3>
-  <span class="update">Last updated: 2014/11/09</span>
-  <button><a href='dragonFinder.html'></a>Start Adventure!</button>
-</div>
 
 <div class="codeBit" id="bubbleWrap">
   <h3>2014 November 09</h3>
@@ -116,34 +80,20 @@
   <div class="makeBubbles"></div>
 </div>
 
-<div class="codeBit" id="catBush">
-  <h3>2014 March 28</h3>
-  <span class="update">Last updated: 2015/08/27</span>
-  <a href="test_catBush.html"><img src="Test_Cat_Bush/fence_with_bushes.png">
-  </a>
-</div>
+
 
 <!--<div class="codeBit" id="bondBuddies">
   <h3>2014 November 15 - hackHER day!</h3>
   <button onclick="window.location.href='/chemistry/index.html'">Bond Buddies!</button>
 </div>-->
 
-<div class="codeBit" id="petPoke">
-  <h3>2015 August 18</h3>
-  <span class="update">Last updated: 2015/08/18</span>
-  <span class="results">Let's not play today. I'm not feeling well...</span>
-  <div><img id="petPic" src="images/pusheen-wiggle-sad.gif" alt="pet pic!"/></div>
-</div>
+
 <!--page content-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/dragonFinder.js"></script>
-<script src="js/catBush.js"></script>
-<script src="js/bubbleWrap.js"></script>
-<script src="js/merryGoRound.js"></script>
-<script src="js/petPoke.js"></script>
+<script src="Pet_Poke/pet_poke.js"></script>
 
 </body>
 </html>

@@ -14,13 +14,17 @@ h3 {
 
 }
 
+a img {
+  height: 150px;
+  width: auto;
+}
 /*navigation bar elements*/
 .navBar h2 {
 	font-size: 28px;
 }
 
 .headerBar {
-	background-image: url("../images/background.jpg");
+	background-image: url("../background.jpg");
   padding: 30px;
   border-radius: 20px;
 }
@@ -96,7 +100,7 @@ h3 {
 
 
 /*codeBit style*/
-.update {
+.update, .bitTitle {
 	display: block;
 	margin-bottom: 20px;
 }
