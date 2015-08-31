@@ -14,6 +14,10 @@ h3 {
 
 }
 
+a img {
+  height: 150px;
+  width: auto;
+}
 /*navigation bar elements*/
 .navBar h2 {
 	font-size: 28px;
@@ -96,7 +100,7 @@ h3 {
 
 
 /*codeBit style*/
-.update {
+.update, .bitTitle {
 	display: block;
 	margin-bottom: 20px;
 }

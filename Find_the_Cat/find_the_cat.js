@@ -9,8 +9,8 @@
 
     var $InstructionField = $('.tries');
     var isCatFound = "notFound";
-    var notCatImg = 'Test_Cat_Bush/cat-pumpkin.png',
-        catImg = 'Test_Cat_Bush/pumpkin-cat.png';
+    var notCatImg = 'Find_the_Cat/cat-pumpkin.png',
+        catImg = 'Find_the_Cat/pumpkin-cat.png';
 
     var catStateStatements = {
       notFound : "Click on a fence to look behind it.",
