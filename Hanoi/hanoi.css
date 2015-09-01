@@ -82,13 +82,3 @@ h2, span, .results {
 .three {
   background-color: aliceblue;
 }
-
-.bar {
-  width : 20px;
-  height: 150px;
-  background-color: #787878;
-  margin: 0 94px;
-  position: absolute;
-  bottom : 0px;
-  z-index: -999999;
-}
