@@ -1,0 +1,95 @@
+body {
+  background-color: #221144;
+}
+
+h2, span, .results {
+  font-family: helvetica, sans-serif;
+  font-weight: bolder;
+  color: lavenderblush;
+  margin: 3px;
+  text-outline: black;
+}
+
+.results {
+  padding: 10px;
+  clear: left;
+}
+.title {
+  margin: 10px;
+}
+
+
+.gameBoard {
+  margin-left: 20px;
+  padding: 20px;
+
+}
+
+.droppable {
+  height: 250px;
+  width: 210px;
+  float: left;
+  position: relative;
+  margin-right: 20px;
+
+}
+
+.draggable {
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.whale {
+  background-color: cornflowerblue;
+  width:200px;
+  background-image: url("assets/whale-disc.png");
+  background-size: cover;
+}
+
+.bear {
+  background-color: #ffff88;
+  width:140px;
+  background-image: url("assets/bear-disc.png");
+  background-size: cover;
+}
+
+.cat {
+  background-color: lightcoral;
+  width:100px;
+  background-image: url("assets/cat-disc.png");
+  background-size: cover;
+}
+
+.imOnABoat {
+  width: 210px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.one {
+  background-color: lavenderblush;
+}
+
+.two {
+  background-color: #ffffaa;
+}
+
+.three {
+  background-color: aliceblue;
+}
+
+.bar {
+  width : 20px;
+  height: 150px;
+  background-color: #787878;
+  margin: 0 94px;
+  position: absolute;
+  bottom : 0px;
+  z-index: -999999;
+}

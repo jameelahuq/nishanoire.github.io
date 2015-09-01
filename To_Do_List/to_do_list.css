@@ -1,0 +1,23 @@
+.sheet {
+  margin: 20px;
+}
+.insert {
+  width:  200px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.template {
+  display: none;
+}
+/*.list {*/
+  /*margin: 10px;*/
+  /*width: 300px;*/
+  /*border: 1px solid black;*/
+/*}*/
+
+/*.list {*/
+  /*text-decoration: line-through;*/
+/*}*/

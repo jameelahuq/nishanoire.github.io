@@ -17,7 +17,6 @@ $(function() {
         stringWeWillPush = ('-').concat(stringWeWillPush);
       } else {
         stringWeWillPush = stringWeWillPush.replace('-', '');
-        ////RURURUAKEFNK CAN:T GET RID OF THAT - SIGN!!!
         console.log(stringWeWillPush);
 
       }
