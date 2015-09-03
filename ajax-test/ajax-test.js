@@ -6,15 +6,17 @@ $(function() {init()});
 function init() {
   initializeWeather();
 
-  $('#threeDayForecast').hide();
-  $('#forecastTab').on("mouseleave", function() {
-    $('#threeDayForecast').hide(400);
+  var $threeDayForecast = $('#threeDayForecast');
+  var $forecastTab = $('#forecastTab');
+  $threeDayForecast.hide();
+  $forecastTab.on("mouseleave", function() {
+    $threeDayForecast.hide(400);
   });
-
-  $('#forecastTab').on("mouseenter", function() {
-    $('#threeDayForecast').show(400);
+  $forecastTab.on("mouseenter", function() {
+    $threeDayForecast.show(400);
   });
   //TODO: Get city from user
+
   var searchBar = $('#weatherSearchBar');
   $('#findWeather').submit(function(e) {
     var inputZip = searchBar.val();
@@ -88,52 +90,9 @@ var displayForecast = function(data) {
     $(e).find(".dayOfWeek").text(data.forecast.simpleforecast.forecastday[i].date.weekday)
     $(e).find("img").attr("src", data.forecast.simpleforecast.forecastday[i].icon_url);
     //$(e).find('#cityState').text(city.replace("_", " ") +  ", " + state);
-    $(e).find('.temp').text(data.forecast.simpleforecast.forecastday[i].high.celsius
-        + " C* - " + data.forecast.simpleforecast.forecastday[i].low.celsius + " C*");
+    $(e).find('.temp').text(data.forecast.simpleforecast.forecastday[i].low.celsius
+        + " C - " + data.forecast.simpleforecast.forecastday[i].high.celsius + " C");
     $(e).find('.humid').text(data.forecast.simpleforecast.forecastday[i].avehumidity + "%");
   });
 };
-
-
-
-
-
-
-
-  //
-  //
-  //
-  //
-  //
-
-  //
-  //
-  //
-  //
-  //});
-  //
-  //
-  //
-  //var promise = $.ajax({
-  //  url: "http://api.wunderground.com/api/3a5cfa6be0748f06/forecast/q/" + state + "/" + city + ".json",
-  //  //dataType: 'jsonp',
-  //  //timeout: 50, --> amount of time you are willing to wait for this request to start
-  //  method: 'GET'
-  //});
-  //
-  //
-  //
-
-  //
-  //
-  //
-  //
-  //});
-  //
-
-
-
-
-  //promise.fail
-//}
 
