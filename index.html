@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 
@@ -43,9 +43,53 @@
     <!--</div>-->
   </div> <!-- headerBar -->
 
-  <div class ="intro">
-    <h3>Try out some of games, or click on the links above!</h3>
-  </div> <!--intro-->
+  <div id="nowWeatherBox">
+    <form id="findWeather">
+      <i class= "fa fa-search"></i><input id="weatherSearchBar" placeholder="enter a zip code">
+    </form>
+    <img src="ajax-test/pusheen-sun.png"/>
+    <div class="weatherStats">
+      <div id="cityState">Where am I today?</div>
+      <div class="tempAndHumid">
+        <span class="temp">Hot!</span><span class="humid">Humid!</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="forecastTab">Three Day Forecast</div>
+  <div id="threeDayForecast">
+    <div class="threeDayDay" id="day1">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "ajax-test/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
+    </div>
+
+    <div class="threeDayDay" id="day2">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "ajax-test/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
+    </div>
+
+    <div class="threeDayDay" id="day3">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "ajax-test/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--<div class ="intro">-->
+    <!--<h3>Try out some of these games!</h3>-->
+  <!--</div> &lt;!&ndash;intro&ndash;&gt;-->
+
+
 
 <!--page content -->
   <div class="codeBit" id="petPoke">
@@ -96,10 +140,11 @@
 
 <!--page content-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/main.js"></script>
-<script src="Pet_Poke/pet_poke.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="ajax-test/ajax-test.js"></script>
+  <script src="Pet_Poke/pet_poke.js"></script>
 
 </body>
 </html>
