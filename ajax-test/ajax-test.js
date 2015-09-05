@@ -9,12 +9,12 @@ function init() {
   var $threeDayForecast = $('#threeDayForecast');
   var $forecastTab = $('#forecastTab');
   $threeDayForecast.hide();
-  $forecastTab.on("mouseleave", function() {
-    $threeDayForecast.hide(400);
+  $forecastTab.on("click", function() {
+    $threeDayForecast.slideToggle(400);
   });
-  $forecastTab.on("mouseenter", function() {
-    $threeDayForecast.show(400);
-  });
+  //$forecastTab.on("mouseenter", function() {
+  //  $threeDayForecast.show(400);
+  //});
   //TODO: Get city from user
 
   var searchBar = $('#weatherSearchBar');
