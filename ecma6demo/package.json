@@ -1,0 +1,23 @@
+{
+  "name": "ecma6demo",
+  "version": "1.0.0",
+  "description": "Writing code in ES6",
+  "main": "entry.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "expect.js": "^0.3.1",
+    "webpack": "^1.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nishanoire.github.io"
+  },
+  "author": "Jameela Huq",
+  "license": "ISC"
+}
