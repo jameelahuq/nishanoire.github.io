@@ -11,6 +11,8 @@ function init() {
   $threeDayForecast.hide();
   $forecastTab.on("click", function() {
     $threeDayForecast.slideToggle(400);
+    $('#forecastArrow').toggleClass("open").toggleClass("close");
+
   });
   //$forecastTab.on("mouseenter", function() {
   //  $threeDayForecast.show(400);
@@ -87,12 +89,12 @@ var displayForecast = function(data) {
     console.log('success data: ', data);
   $('.threeDayDay').toArray().forEach(function(e, i) {
     //TODO: Record each element into an array upon initialization.
-    $(e).find(".dayOfWeek").text(data.forecast.simpleforecast.forecastday[i].date.weekday)
-    $(e).find("img").attr("src", data.forecast.simpleforecast.forecastday[i].icon_url);
+    $(e).find(".dayOfWeek").text(data.forecast.simpleforecast.forecastday[i+1].date.weekday)
+    $(e).find("img").attr("src", data.forecast.simpleforecast.forecastday[i+1].icon_url);
     //$(e).find('#cityState').text(city.replace("_", " ") +  ", " + state);
-    $(e).find('.temp').text(data.forecast.simpleforecast.forecastday[i].low.celsius
-        + " C - " + data.forecast.simpleforecast.forecastday[i].high.celsius + " C");
-    $(e).find('.humid').text(data.forecast.simpleforecast.forecastday[i].avehumidity + "%");
+    $(e).find('.temp').text(data.forecast.simpleforecast.forecastday[i+1].low.celsius
+        + " C - " + data.forecast.simpleforecast.forecastday[i+1].high.celsius + " C");
+    $(e).find('.humid').text(data.forecast.simpleforecast.forecastday[i+1].avehumidity + "%");
   });
 };
 

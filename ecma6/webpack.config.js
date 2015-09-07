@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
     main: "./entry.js",
-    test: "./mochademo/mochademo.js"
+    test: "./mocha_tests/mocha_tests.js"
   },
   output: {
     //path: __dirname,

@@ -16,8 +16,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 </head>
 
@@ -47,7 +48,7 @@
     <form id="findWeather">
       <i class= "fa fa-search"></i><input id="weatherSearchBar" placeholder="enter a zip code">
     </form>
-    <img src="ajax-test/pusheen-sun.png"/>
+    <img src="weather-bar/pusheen-sun.png"/>
     <div class="weatherStats">
       <div id="cityState">Where am I today?</div>
       <div class="tempAndHumid">
@@ -57,15 +58,14 @@
 
   </div>
 
-  <div id="webCam"><img src="boxes/pusheen_internet_wiggle.gif"/>Click to see next</div>
+  <!--<div id="webCam"><img src="boxes/pusheen_internet_wiggle.gif"/>Click to see next</div>-->
 
-  </div>
 
-  <div id="forecastTab"><i class="fa fa-get-pocket"></i> Three Day Forecast</div>
+  <div id="forecastTab"><i id="forecastArrow" class="fa fa-get-pocket close"></i> Three Day Forecast</div>
   <div id="threeDayForecast">
     <div class="threeDayDay" id="day1">
       <div class="dayOfWeek">Caturday</div>
-      <img src = "ajax-test/pusheen-sun.png"/>
+      <img src = "weather-bar/pusheen-sun.png"/>
       <div class="tempAndHumid">
         <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
       </div>
@@ -73,7 +73,7 @@
 
     <div class="threeDayDay" id="day2">
       <div class="dayOfWeek">Caturday</div>
-      <img src = "ajax-test/pusheen-sun.png"/>
+      <img src = "weather-bar/pusheen-sun.png"/>
       <div class="tempAndHumid">
         <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
       </div>
@@ -81,7 +81,7 @@
 
     <div class="threeDayDay" id="day3">
       <div class="dayOfWeek">Caturday</div>
-      <img src = "ajax-test/pusheen-sun.png"/>
+      <img src = "weather-bar/pusheen-sun.png"/>
       <div class="tempAndHumid">
         <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
       </div>
@@ -148,7 +148,7 @@
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/bubbleWrap.js"></script>
   <script src="js/main.js"></script>
-  <script src="ajax-test/ajax-test.js"></script>
+  <script src="weather-bar/weather-bar.js"></script>
   <script src="Pet_Poke/pet_poke.js"></script>
 
 </body>
