@@ -10,16 +10,16 @@ $(function() {
 function init(){
   var gameBoard = new Firebase('https://battleshipgames.firebaseio.com/');
   var $gameBoard = $('.gameBoard');
-  var $myGameBoard = $('.myGameBoard');
-  var $theirGameBoard = $('.theirGameBoard');
+  var $myGameBoard = $('#myGameBoard');
+  var $theirGameBoard = $('#theirGameBoard');
   var row;
   var col;
 
   $(".resetButton").on("click",clearDB);
   $(".makeBoardButton").click(makeGameBoard);
   $(".startGame").on("click", sendUpdatedData);
-  $("#myGameBoard").on("click",".tile",selectShipPlace);
-  $("#theirGameBoard").on("click",".tile",opponentTileClicked);
+  $myGameBoard.on("click",".tile",selectShipPlace);
+  $theirGameBoard.on("click",".tile",opponentTileClicked);
 
   makeGameBoard();
 
