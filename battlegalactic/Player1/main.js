@@ -2,23 +2,29 @@
  * Created by Dagli on 9/11/15.
  */
 
-$(document).ready(init);
-
+$(function() {
+  init();
+});
 
 
 function init(){
   var gameBoard = new Firebase('https://battleshipgames.firebaseio.com/');
   var $gameBoard = $('.gameBoard');
+  var me = 'player1';
+  var opponent = 'player2';
+  var currentPlayer = "Player1";
   var $myGameBoard = $('#myGameBoard');
   var $theirGameBoard = $('#theirGameBoard');
   var row;
   var col;
+  var myShipCount = 0;
+  var winGameCondition = 15;
+  var opponentShips = 15;
 
-  $(".resetButton").on("click",clearDB);
+  $(".makeBoardButton").click(makeGameBoard);
   $(".startGame").on("click", sendUpdatedData);
   $myGameBoard.on("click",".tile",selectShipPlace);
-  $theirGameBoard.on("click", ".tile", opponentTileClicked);
-  $(".makeBoardButton").click(makeGameBoard);
+  $theirGameBoard.on("click",".tile",opponentTileClicked);
 
   makeGameBoard();
 
@@ -33,9 +39,13 @@ function init(){
     console.log("DataBase Reset");
   }
 
+
   function makeGameBoard(){
     $gameBoard.empty();
+    myShipCount=0;
+    opponentShips=winGameCondition;
     $myGameBoard.text("My Galaxy");
+    $(".playerName").text(me.toUpperCase());
     $theirGameBoard.text("Opponent's Galaxy");
     clearDB();
     for (var j= 0; j < 10; j++) {
@@ -46,65 +56,66 @@ function init(){
       }
       $gameBoard.find('.row:last').append(rowArray);
     }
+
   }
 
   function sendUpdatedData (row,col) {
-    gameBoard.child('player1').child(row).child(col).update({ship: true, status: 'njmk'});
+    gameBoard.child(me).child(row).child(col).update({ship: true, status: 'null'});
   }
 
   function selectShipPlace(){
     var tile = $(this);
-    tile.addClass('shipIsHere');
+    if(tile.attr('class').match(/shipIsHere/g)){
+      alert("There is already a missile here!!");
+    }
+    else if (myShipCount < winGameCondition ) {
+      myShipCount++;
+      tile.addClass('shipIsHere');
+      var rowSelected = tile.closest('.row').data('row');
+      var colSelected = tile.data('col');
+      sendUpdatedData(rowSelected, colSelected);
+    } else {
+      alert("You are out of Missiles");
+    }
+  }
+
+  function opponentTileClicked(){
+    var tile = $(this);
+    console.log(tile);
     var rowSelected = tile.closest('.row').data('row');
     var colSelected = tile.data('col');
-    sendUpdatedData(rowSelected,colSelected);
+    console.log(rowSelected);
+    console.log(colSelected);
+    isShipHit(rowSelected,colSelected,function(isShip){
+      if(isShip) {
+        tile.addClass('hit');
+        gameBoard.child(opponent).child(rowSelected).child(rowSelected).update({status: 'HIT'});
+        opponentShips--;
+        if(opponentShips ===0) {
+          alert("You win!!!!!!!!!");
+          $gameBoard.addClass("done");
+        }
+      } else {
+        tile.addClass('miss');
+        gameBoard.child(opponent).child(rowSelected).child(rowSelected).update({status: 'MISS'});
+      }
+    });
   }
-}
-
-function opponentTileClicked(){
-  var tile = $(this);
-  console.log(tile);
-  var rowSelected = tile.closest('.row').data('row');
-  var colSelected = tile.data('col');
-  console.log(rowSelected);
-  console.log(colSelected);
-  isShipHit(rowSelected,colSelected, function(isShip) {
-    if(isShip)
-      tile.addClass('hit');
-    else
-      tile.addClass('miss');
-  });
-}
+  function isShipHit(row, col, callback){
+    console.log("get get get get");
+    console.log("passed"+row+" "+col);
+    var gamePiece = new Firebase('https://battleshipgames.firebaseio.com/'+opponent+'/'+ row + '/' + col);
+    gamePiece.on('value', function(snapshot) {
+      console.log("ship "+snapshot.val().ship);
+      callback(snapshot.val().ship);
+    });
+  }
+}//end of init
 
 
 
 
-function isShipHit(row, col, callback) {
-  console.log("get get get get");
-  console.log("passed" + row + " " + col);
-  var gamePiece = new Firebase('https://battleshipgames.firebaseio.com/player2/' + row + '/' + col);
-  gamePiece.on('value', function (snapshot) {
-    console.log("ship " + snapshot.val().ship);
-    callback(snapshot.val().ship);
-  });
-}
 
 
-
-  //$(".row").on("click",".rowElement",cellClicked);
-  //$(".imagePlaced").on("click",".rowElement",cellClicked)
-
-function cellClicked(){
-  //when cell clicked 
-  //1.check if hit call shipHit
-  //2.send data back  --- call sendUpdatedData
-}
-
-function shipHit(){
-
-  //check if hit
-  //change class to red
-  //
-}
 
 
