@@ -1,0 +1,9 @@
+var notes13Sept = [
+  URI = {standsfor: "uniform resource identifier"} ,
+  {meaning: "string of characters used to identify the name of a resource"},
+  {purpose: "enables interaction with representations of the resource over a network"}
+];
+
+
+//uri encoded sentence: /words/ lettres, words, spaces
+//take the sentence, response with an object

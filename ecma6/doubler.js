@@ -24,7 +24,7 @@
 
 
 
-//let doubler = new Doubler();
+//let doubler = new Doubler();git
 
 
   let doubler = (...args) => {
