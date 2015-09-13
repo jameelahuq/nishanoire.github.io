@@ -1,26 +1,26 @@
 .row div {
   border: 1px solid darkorange;
-  outline: 1px solid darkorange;
   width: 55px;
   height: 55px;
   display: inline-block;
 }
 
+.row {
+  display: flex;
+}
+
 h1, h2{
   color:yellow;
+  margin: 10px;
+}
+
+.playerName {
+  display: inline-block;
 }
 
 .gameBoard {
   display: inline-block;
-}
-
-.spaceCol {
-  display: inline-block;
-  width:30px;
-}
-
-.row {
-  margin: 0;
+  margin: 0 40px 40px 40px;
 }
 
 .background {
@@ -34,11 +34,6 @@ h1, h2{
   display: block;
 }
 
-.block {
-  display: inline-block;
-  font-size: 20px;
-  color:yellow;
-}
 
 .miss {
   /*background-color: white;*/

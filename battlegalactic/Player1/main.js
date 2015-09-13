@@ -44,9 +44,9 @@ function init(){
     $gameBoard.empty();
     myShipCount=0;
     opponentShips=winGameCondition;
-    $myGameBoard.text("My Galaxy");
+    $myGameBoard.append("<h2 class='boardName'>My Galaxy</h2>");
     $(".playerName").text(me.toUpperCase());
-    $theirGameBoard.text("Opponent's Galaxy");
+    $theirGameBoard.append("<h2 class='boardName'>Opponent's Galaxy</h2>");
     clearDB();
     for (var j= 0; j < 10; j++) {
       var rowArray = [];
