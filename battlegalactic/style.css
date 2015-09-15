@@ -7,6 +7,7 @@
 
 .row {
   display: flex;
+  margin: 0;
 }
 
 h1, h2{
@@ -19,6 +20,12 @@ h1, h2{
 }
 
 .gameBoard {
+  display: inline-block;
+  background-color:rgba(255,0,255,0.1);
+
+}
+
+.gameArena {
   display: inline-block;
   margin: 0 40px 40px 40px;
 }
@@ -38,20 +45,20 @@ h1, h2{
 .miss {
   /*background-color: white;*/
   background-image: url('images/miss.png');
-  background-size: 50px;
+  background-size: 100% 100%;
 }
 
 .hit {
   /*background-color: red;*/
   background-image: url('images/blast.png');
-  background-size: 50px;
+  background-size: 100% 100%;
 }
 
 .shipIsHere {
   /*background-color: blueviolet;*/
   background-image: url('images/rocket3.png');
-  background-size: 55px;
+  background-size: 100%;
 }
-.done {
+.hidden {
   display: none;
 }

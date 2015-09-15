@@ -9,35 +9,41 @@ $(function() {
 
 function init(){
   var gameBoard = new Firebase('https://battleshipgames.firebaseio.com/');
-  var $gameBoard = $('.gameBoard');
+
   var me = 'player2';
   var opponent = 'player1';
-  var currentPlayer = "Player1";
+  var myStatusLink = new Firebase('https://battleshipgames.firebaseio.com/' + me + '/');
+  var oppStatusLink = new Firebase('https://battleshipgames.firebaseio.com/' + opponent + '/');
+  //var currentPlayer = "player1";
+
+  var $gameBoard = $('.gameBoard');
   var $myGameBoard = $('#myGameBoard');
   var $theirGameBoard = $('#theirGameBoard');
+  var $theirArena = $('#theirArena');
   var row;
   var col;
   var myShipCount = 0;
   var winGameCondition = 15;
   var opponentShips = 15;
 
-  $(".resetButton").on("click",clearDB);
   $(".makeBoardButton").click(makeGameBoard);
-  $(".startGame").on("click", sendUpdatedData);
+  $(".startGame").on("click", setMeAsReady);
   $myGameBoard.on("click",".tile",selectShipPlace);
   $theirGameBoard.on("click",".tile",opponentTileClicked);
-
   makeGameBoard();
+  isMyOpponentReady();
 
   function clearDB(){
-         var array1 = [];
-         var array2 = ["","","","","","","","","",""];
-         for(var i =0; i<10;i++){
-             array1.push(array2);
-         }
-         console.log(array1);
-         gameBoard.set({"player1" :array1,"player2" :array1, "row":"null", "col":"null"});
-   console.log("DataBase Reset");
+    var array1 = [];
+    var array2 = ["","","","","","","","","",""];
+    for(var i =0; i<10;i++){
+      array1.push(array2);
+    }
+    console.log(array1);
+    gameBoard.set({"player1" :array1,"player2" :array1, "row":"null", "col":"null"} );
+    myStatusLink.update({status: "selecting"});
+    oppStatusLink.update({status: "selecting"});
+    console.log("DataBase Reset");
   }
 
 
@@ -45,9 +51,8 @@ function init(){
     $gameBoard.empty();
     myShipCount=0;
     opponentShips=winGameCondition;
-    $myGameBoard.text("My Galaxy");
     $(".playerName").text(me.toUpperCase());
-    $theirGameBoard.text("Opponent's Galaxy");
+    $theirArena.addClass('hidden');
     clearDB();
     for (var j= 0; j < 10; j++) {
       var rowArray = [];
@@ -66,7 +71,10 @@ function init(){
   function selectShipPlace(){
     var tile = $(this);
     if(tile.attr('class').match(/shipIsHere/g)){
-      alert("There is already a missile here!!");
+      $(".modal-title").text("You cannot place missiles on top of each other");
+      $('#myModal').modal({
+        show: 'false'
+      });
     }
     else if (myShipCount < winGameCondition ) {
       myShipCount++;
@@ -75,8 +83,35 @@ function init(){
       var colSelected = tile.data('col');
       sendUpdatedData(rowSelected, colSelected);
     } else {
-      alert("You are out of Missiles");
+      $(".modal-title").text("You cannot add any more Missiles");
+      $('#myModal').modal({
+        show: 'false'
+      });
     }
+  }
+
+  function setMeAsReady () {
+    console.log("I wanna be ready!");
+    if (myShipCount < winGameCondition) {
+      alert("You are not ready!");
+    } else {
+      myStatusLink.update({status: 'ready'});
+    }
+  }
+
+  function isMyOpponentReady() {
+    myStatusLink.on('value', function (snapshot) {
+      var myStatus = snapshot.val().status;
+      console.log("I am " + myStatus);
+      oppStatusLink.on('value', function (snapshot) {
+        console.log("opponent is " + snapshot.val().status);
+        if (snapshot.val().status === "ready" && myStatus === "ready") {
+          $theirArena.removeClass('hidden');
+        }
+      });
+
+
+    });
   }
 
   function opponentTileClicked(){
@@ -86,18 +121,21 @@ function init(){
     var colSelected = tile.data('col');
     console.log(rowSelected);
     console.log(colSelected);
-    isShipHit(rowSelected,colSelected,function(isShip){
+    isShipHit(rowSelected, colSelected,function(isShip){
       if(isShip) {
         tile.addClass('hit');
-        gameBoard.child(opponent).child(rowSelected).child(rowSelected).update({status: 'HIT'});
+        gameBoard.child(opponent).child(rowSelected).child(colSelected).update({status: 'HIT'});
         opponentShips--;
         if(opponentShips ===0) {
-          alert("You win!!!!!!!!!");
+          $(".modal-title").text("Congratulation!!! you've conquered the battle");
+          $('#myModal').modal({
+            show: 'false'
+          });
           $gameBoard.addClass("done");
         }
       } else {
         tile.addClass('miss');
-        gameBoard.child(opponent).child(rowSelected).child(rowSelected).update({status: 'MISS'});
+        gameBoard.child(opponent).child(rowSelected).child(colSelected).update({status: 'MISS'});
       }
     });
   }
@@ -110,8 +148,7 @@ function init(){
       callback(snapshot.val().ship);
     });
   }
-
-}//end of init
+};//end of init
 
 
 
