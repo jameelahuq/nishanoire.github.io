@@ -131,7 +131,7 @@ function init(){
           $('#gameArea').hide();
           $('.image').prepend('<img src="../images/Fireworks.gif" class="fire">');
           $('.image').prepend('<div class="fires">YOU WIN!!!!</div>');
-          $gameArena.addClass("hidden");
+          $('.gameArena').addClass("hidden");
         }
       } else {
         tile.addClass('miss');
