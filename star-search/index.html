@@ -11,24 +11,24 @@
     <script src="dist/bundle.js"></script>
   </head>
   <body ng-app="planets">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <div class="well">
-            <form>
-              <textarea class="form-control" ng-trim="false" placeholder="What's happening?" ng-model="tweet"></textarea>
-            </form>
-            <p class="help-block">
-              <span ng-class="{'red': invalidTweetLength()}">{{remainingCharacters()}}</span>
-            </p>
-            <button type="button" ng-click="sendTweet()" class="btn btn-success" ng-disabled="invalidTweetLength()">Tweet</button>
-          </div>
+    <!--<div class="container">-->
+      <!--<div class="row">-->
+        <!--<div class="col-sm-8 col-sm-offset-2">-->
+          <!--<div class="well">-->
+            <!--<form>-->
+              <!--<textarea class="form-control" ng-trim="false" placeholder="What's happening?" ng-model="tweet"></textarea>-->
+            <!--</form>-->
+            <!--<p class="help-block">-->
+              <!--<span ng-class="{'red': invalidTweetLength()}">{{remainingCharacters()}}</span>-->
+            <!--</p>-->
+            <!--<button type="button" ng-click="sendTweet()" class="btn btn-success" ng-disabled="invalidTweetLength()">Tweet</button>-->
+          <!--</div>-->
 
-          <ul class="list-unstyled" >
-            <li ng-repeat="tweet in tweetList track by $index">
-              {{tweet}}
-            </li>
-          </ul>
+          <!--<ul class="list-unstyled" >-->
+            <!--<li ng-repeat="tweet in tweetList track by $index">-->
+              <!--{{tweet}}-->
+            <!--</li>-->
+          <!--</ul>-->
           <!--<div ng-if="tweetList.length === 0">-->
             <!--No tweets here...-->
           <!--</div>-->
