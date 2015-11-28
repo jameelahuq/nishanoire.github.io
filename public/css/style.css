@@ -3,7 +3,7 @@ body {
 	font-family: garamond,times,serif;
 	font-size: 16px;
 	color: #ffff99;
-	padding: 15px;
+	padding-left: 15px;
 	background-color: #000;
 }
 
@@ -14,6 +14,10 @@ h3 {
 
 }
 
+img {
+	border-radius: 6px;
+}
+
 /*navigation bar elements*/
 .navBar h2 {
 	font-size: 28px;
@@ -21,8 +25,8 @@ h3 {
 
 .headerBar {
 	background-image: url("../images/background.jpg");
-  padding: 30px;
-  border-radius: 20px;
+	padding: 30px;
+	border-radius: 20px;
 }
 
 .nameBar h1 {
@@ -43,6 +47,125 @@ h3 {
 .navBar li {
 	display: inline-block;
 }
+
+
+
+/*weather bar elements*/
+#cityState {
+	font-size: 30px;
+	margin-bottom: 3px;
+}
+
+.dayOfWeek {
+	font-weight: bolder;
+}
+
+.tempAndHumid {
+	font-family: helvetica, arial, sans-serif;
+}
+
+#nowWeatherBox .tempAndHumid {
+	font-size: 15px;
+}
+
+#nowWeatherBox .humid {
+	float: right;
+	margin-left: 15px;
+}
+
+#nowWeatherBox img {
+	width: 75px;
+	vertical-align: middle;
+}
+
+#nowWeatherBox .weatherStats {
+	display: inline-block;
+	position: relative;
+	top: 20px;
+}
+
+#findWeather {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+#forecastArrow.open {
+	transition: transform 0.6s;
+	transform: rotate(180deg);
+}
+
+#forecastArrow.close {
+  transition: transform 0.6s;
+  transform: rotate(360deg);
+}
+
+#threeDayForecast {
+	margin-top: 5px;
+
+}
+
+#threeDayForecast img {
+	width: 75px;
+}
+
+.threeDayDay {
+	display: inline-block;
+	background-color: #221144;
+	padding: 10px;
+  border-radius: 5px;
+
+}
+
+#forecastTab {
+  background-color: #221144;
+  padding: 3px;
+  padding-left: 8px;
+  margin-top: 5px;
+  font-family: helvetica;
+}
+
+
+
+@media (min-width: 700px) {
+	#threeDayForecast {
+		margin-left: 120px;
+	}
+
+  #forecastTab {
+    margin-left: 120px;
+  }
+}
+
+@media (min-width: 470px) {
+	.weatherStats {
+		margin-left: 40px;
+	}
+
+	.threeDayDay {
+		margin-right: 40px;
+	}
+
+
+
+}
+
+@media (max-width: 470px) {
+	#nowWeatherBox {
+		margin-bottom:40px;
+	}
+
+	.threeDayDay {
+		display: block;
+		margin-top: 30px;
+	}
+}
+
+a img {
+  height: 150px;
+  width: auto;
+}
+
 
 /*index page elements */
 .assignments h2 {
@@ -96,7 +219,7 @@ h3 {
 
 
 /*codeBit style*/
-.update {
+.update, .bitTitle {
 	display: block;
 	margin-bottom: 20px;
 }
@@ -129,74 +252,12 @@ button:focus {
 	font-family: helvetica,arial,sans-serif;
 }
 
-/*cat human laser styles*/
-/*
-#catHumanLaser img {
-	vertical-align: middle;
-}*/
-
-#catHumanLaser .results {
-	padding: 25px;
-	margin-top:15px;
-	width: 300px;
-	height: 250px;
-}
-
-#catHumanLaser .buttonPad .text {
-	color: #000;
-	display: block;
-	position: absolute;
-	bottom: 2px;
-	left: 0;
-	width: 95px;
-	text-align: center;
-	background-color: transparent;
-}
-
-#catHumanLaser .buttonPad {
-	display: inline-block;
-	margin-right: 5px;
-	vertical-align: top;
-}
-
-#catHumanLaser .userChoice button:hover,
-#catHumanLaser .picked,
-#dragonFinder button:hover,
-#bondBuddies button:hover {
-	border: solid 1px;
-	transform: scale(1.2);
-	z-index: 2;
-	opacity: 1;
-}
-
-
-
-#catHumanLaser .results img {
-	height: 220px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto
-}
-
-#catHumanLaser .results .text
-{
-  display: block;
-  margin-bottom: 10px;
-}
-
-#merryGoRound .results,
 #petPoke .results {
   margin-left: 4px;
   margin-right: 4px;
   margin-top: 4px;
   padding: 10px;
 
-}
-
-#merryGoRound button:hover {
-	transition: transform 0.6s;
-	transform: rotate(720deg);
-	opacity: 1;
 }
 
 /* bubble wrap */
