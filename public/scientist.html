@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<!--header content-->
+<div class="headerBar">
+  <div class="nameBar">
+    <div class="container">
+      <h1>Jameela Huq</h1>
+    </div>
+  </div>
+  <div class="navBar">
+    <div class="container">
+      <h2>
+      <tr>
+        <td><a href="teacher.html">Teacher</a></td>
+        <td><a href="scientist.html">Scientist</a></td>
+        <td><a href="musician.html">Musician</a></td>
+        <td><a href="index.html">Self</a></td>
+      </ul>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<!--page content -->
+<div class="codeBit" id="catHumanLaser">
+  <h3>2014 October 19</h3> 
+  <span class="update">Last updated: 2014/11/09</span>
+  
+  <div class="buttonPad userChoice">
+    <span>Player</span>
+    <button data-choice="cat">
+      <img src="images/cat.jpg"/>
+      <span class="text">cat</span>
+    </button>
+    <button data-choice="human">
+      <img src="images/human.jpg"/>
+      <span class="text">human</span>
+    </button>
+    <button data-choice="laser">
+      <img src="images/laser.jpg"/>
+      <span class="text">laser</span>
+    </button>
+  </div>
+  
+  <div class="results">
+    <span class="text"></span>
+    <img src=""/>
+  </div>
+  
+  <div class="buttonPad computerChoice">
+    <span>Opponent</span>
+    <button class="cat">
+      <img src="images/cat.jpg"/>
+      <span class="text">cat</span>
+    </button>
+    <button class="human">
+      <img src="images/human.jpg"/>
+      <span class="text">human</span>
+    </button>
+    <button class="laser">
+      <img src="images/laser.jpg"/>
+      <span class="text">laser</span>
+    </button>
+  </div>
+</div>
+
+<div class="codeBit" id="romanNumeral"></div>
+
+ <div class="codeBit" id="merryGoRound">
+  <h3>2014 October 20</h3>
+  <button>Spin!</button>
+  <span class="results"></span>
+</div>
+
+<div class="codeBit" id="dragonFinder">
+  <h3>2014 October 25</h3>
+  <span class="update">Last updated: 2014/11/09</span>
+  <button>Start Adventure!</button>
+</div>
+
+<div class="codeBit" id="bubbleWrap">
+  <h3>2014 November 09</h3>
+  <span class="update">Last updated: 2014/11/24</span>
+  <form>
+    <input type="text" name="numBubbles" placeholder="How Many Bubbles?"/>
+    <input type="submit" value="Create!"/>
+  </form>
+  <div class="makeBubbles"></div>
+</div>
+
+<div class="codeBit" id="bondBuddies">
+  <h3>2014 November 15 - hackHER day!</h3>
+  <button onclick="window.location.href='/chemistry/index.html'">Bond Buddies!</button>
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dragonFinder.js"></script>
+<script src="js/bubbleWrap.js"></script>
+
+</body>
+</html>
