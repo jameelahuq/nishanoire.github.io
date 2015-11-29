@@ -14,11 +14,8 @@ function init() {
     $('#forecastArrow').toggleClass("open").toggleClass("close");
 
   });
-  //$forecastTab.on("mouseenter", function() {
-  //  $threeDayForecast.show(400);
-  //});
-  //TODO: Get city from user
 
+  //TODO: Get city from user
   var searchBar = $('#weatherSearchBar');
   $('#findWeather').submit(function(e) {
     var inputZip = searchBar.val();
@@ -50,10 +47,9 @@ var getInputCityWeather = function(zipCode) {
 };
 
 function displayWeather(zipCode) {
-  console.log("bite me");
 
   var promiseCondition = $.ajax({
-    url: "http://api.wunderground.com/api/3a5cfa6be0748f06/conditions/q/" + zipCode + ".json",
+    url: "https://api.wunderground.com/api/3a5cfa6be0748f06/conditions/q/" + zipCode + ".json",
     method: 'GET'
   });
 
@@ -62,7 +58,7 @@ function displayWeather(zipCode) {
     displayCondition(data);
 
     var promiseForecast =  $.ajax({
-      url: "http://api.wunderground.com/api/3a5cfa6be0748f06/forecast/q/" + zipCode + ".json",
+      url: "https://api.wunderground.com/api/3a5cfa6be0748f06/forecast/q/" + zipCode + ".json",
       method: 'GET'
     });
 
