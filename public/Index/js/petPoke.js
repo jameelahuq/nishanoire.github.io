@@ -39,7 +39,7 @@
 	function greetUser () {
 	  ownerName = cookieMonsterWill.findCookie("petpoke_ownername");
 	  if (ownerName && navigator.cookieEnabled) {
-		$results.text(ownerName + "! You're Back! I missed you!");
+		$results.text(ownerName + "! You're back! I missed you!");
 		changeToPetPic(petPic.okCat);
 	  }
 	  else 

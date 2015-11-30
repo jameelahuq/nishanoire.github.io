@@ -1,0 +1,114 @@
+/*font-family: "Trebuchet MS",helvetica,arial,sans-serif;*/
+body {
+	font-family: garamond,times,serif;
+	font-size: 16px;
+	color: #ffff99;
+	background-color: #000;
+}
+
+h3 {
+	font-size: 1.3em;
+  margin-top: 2em;
+  font-weight: bold;
+
+}
+
+img {
+	border-radius: 6px;
+}
+
+/*navigation bar elements*/
+.headerBar {
+	background-image: url("../images/background.jpg");
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.nameBar h1 {
+	font-size: 52px;
+	font-weight:bold;
+}
+
+/*codeBit grid*/
+.codePortfolio {
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+.codeBit {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/*codeBit style*/
+.update, .bitTitle {
+	display: block;
+	margin-bottom: 20px;
+}
+
+/* bubble wrap */
+
+#bubbleWrap .makeBubbles div {
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	width: 50px;
+  height: 50px;
+	position: relative;
+	border: solid 2px #000;
+	opacity: .7;
+}
+
+
+#bubbleWrap form {
+	display: inline;
+}
+
+#bubbleWrap form input {
+	width: auto;
+	padding: 2px;
+}
+
+#bubbleWrap .create
+ {
+	border-radius: 0px;
+	width: auto;
+	padding: 4px;
+	height: auto;
+	display: inline;
+}
+
+/*Poke My Cat*/
+#petPoke {
+  float: right;
+}
+
+#petPoke img,
+#petPoke .results {
+	/*margin-top: 100px;
+	text-align: center; */
+  display: block;
+	width: 180px;
+  margin-right: 15px;
+}
+
+@media (max-width: 360px) {
+	#petPoke img {
+		width: 50%;
+	}
+
+  #petPoke {
+    float: inherit;
+  }
+}
+
+#petPoke .results {
+  margin-top: 4px;
+  padding: 20px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  display: inline-block;
+  font-family: arial,sans-serif;
+}

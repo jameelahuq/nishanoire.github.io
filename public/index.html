@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8"/>
 <script>
   (function(i,s,o,g,r,a,m) {
     i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
@@ -14,10 +15,12 @@
 
 </script>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Index/css/reset.css">
+  <!--<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.1/css/foundation.css">
+  <link rel="stylesheet" type="text/css" href="Index/css/style.css">
+  <link rel="stylesheet" type="text/css" href="Weather_Bar/weather-bar.css">
 
 
 </head>
@@ -30,121 +33,108 @@
       <h1>Jameela Huq</h1>
     </div>
   </div>
-  <!--<div class="navBar">-->
-  <!--<div class="container">-->
-  <!--<h2>-->
-  <!--<ul>-->
-  <!--<a href="teacher.html">Diary of a Coding House Dick</a>-->
-  <!--<a href="scientist.html">Scientist</a>-->
-  <!--<a href="musician.html">Musician</a>-->
-  <!--<a href="index.html">Home</a>-->
-  <!--</ul>-->
-  <!--</h2>-->
-  <!--</div>-->
-  <!--</div>-->
-</div> <!-- headerBar -->
-
-<div id="nowWeatherBox">
-  <form id="findWeather">
-    <i class= "fa fa-search"></i><input id="weatherSearchBar" placeholder="enter a zip code">
-  </form>
-  <img src="Weather_Bar/pusheen-sun.png"/>
-  <div class="weatherStats">
-    <div id="cityState">Where am I today?</div>
-    <div class="tempAndHumid">
-      <span class="temp">Hot!</span><span class="humid">Humid!</span>
-    </div>
-  </div>
-
 </div>
+
+
+<div id="forecastPanel">
+
+  <div id="nowWeatherBox">
+    <img src="Weather_Bar/pusheen-sun.png"/>
+    <div class="weatherStats">
+
+      <div id="cityState">Where am I today?</div>
+
+      <div class="tempAndHumid">
+        <span class="temp">Hot!</span><span class="humid">Humid!</span>
+      </div>
+
+      <form id="findWeather">
+        <i class= "fa fa-search"></i><input id="weatherSearchBar" placeholder="enter a zip code">
+
+      </form>
+    </div>
+
+  </div>
 
 <!--<div id="webCam"><img src="boxes/pusheen_internet_wiggle.gif"/>Click to see next</div>-->
 
+  <div id="forecastTab"><i id="forecastArrow" class="fa fa-get-pocket close"></i> Three Day Forecast</div>
 
+  <div id="threeDayForecast">
+    <div class="threeDayDay" id="day1">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "Weather_Bar/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
+    </div>
 
-<div id="forecastTab"><i id="forecastArrow" class="fa fa-get-pocket close"></i> Three Day Forecast</div>
-<div id="threeDayForecast">
-  <div class="threeDayDay" id="day1">
-    <div class="dayOfWeek">Caturday</div>
-    <img src = "Weather_Bar/pusheen-sun.png"/>
-    <div class="tempAndHumid">
-      <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+    <div class="threeDayDay" id="day2">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "Weather_Bar/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
+    </div>
+
+    <div class="threeDayDay" id="day3">
+      <div class="dayOfWeek">Caturday</div>
+      <img src = "Weather_Bar/pusheen-sun.png"/>
+      <div class="tempAndHumid">
+        <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
+      </div>
     </div>
   </div>
 
-  <div class="threeDayDay" id="day2">
-    <div class="dayOfWeek">Caturday</div>
-    <img src = "Weather_Bar/pusheen-sun.png"/>
-    <div class="tempAndHumid">
-      <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
-    </div>
-  </div>
+</div><!--forecast panel-->
 
-  <div class="threeDayDay" id="day3">
-    <div class="dayOfWeek">Caturday</div>
-    <img src = "Weather_Bar/pusheen-sun.png"/>
-    <div class="tempAndHumid">
-      <div class="temp">Cold-Hot!</div><div class="humid">Humid!</div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-<!--<div class ="intro">-->
-<!--<h3>Try out some of these games!</h3>-->
-<!--</div> &lt;!&ndash;intro&ndash;&gt;-->
-
-
-
-<!--page content -->
 <div class="codeBit" id="petPoke">
   <h3>2015 August 18</h3>
   <span class="update">Last updated: 2015/08/18</span>
-  <span class="results">Let's not play today. I'm not feeling well...</span>
-  <div><img id="petPic" src="images/pusheen-wiggle-sad.gif" alt="pet pic!"/></div>
+  <div>
+    <img id="petPic" src="images/pusheen-wiggle-sad.gif" alt="pet pic!"/>
+    <span class="results">Let's not play today. I'm not feeling well...</span>
+  </div>
 </div>
 
+<ul class="codePortfolio">
 
-<div class="codeBit" id="battleShips">
-  <h3>2015 Sept 22</h3>
-  <span class="update">Last updated: 2015/09/22</span>
-  <a href="Battleship_Galactic/index.html"><img id="battlePic" src="Battleship_Galactic/images/rocket3.png"/></a>
-</div>
+  <li class="codeBit" id="battleShips">
+    <h3>2015 Sept 22</h3>
+    <span class="update">Last updated: 2015/09/22</span>
+    <a href="Battleship_Galactic/index.html"><img id="battlePic" src="Battleship_Galactic/images/rocket3.png"/></a>
+    <span class="bitTitle">Battleship Galactic!</span>
+  </li>
 
-<div class="codeBit" id="Hanoi">
-  <h3>2015 August 31</h3>
-  <span class="update">Last updated: 2015/08/32</span>
-  <a href="Hanoi/hanoi.html"><img src="Hanoi/assets/whale-disc.jpg"></a>
-  <span class="bitTitle">Play a game with me!</span>
-</div>
+  <li class="codeBit" id="Hanoi">
+    <h3>2015 August 31</h3>
+    <span class="update">Last updated: 2015/08/32</span>
+    <a href="Hanoi/hanoi.html"><img src="Hanoi/assets/whale-disc.jpg"></a>
+    <span class="bitTitle">Play a game with me!</span>
+  </li>
 
-<div class="codeBit" id="Flikd">
-  <h3>2015 August 29</h3>
-  <span class="update">Last updated: 2015/08/30</span>
-  <a href="Boxes/boxes.html"><img src="Boxes/pusheen_internet_wiggle.gif"></a>
-  <span class="bitTitle">Let's find photos together!</span>
-</div>
+  <li class="codeBit" id="Flikd">
+    <h3>2015 August 29</h3>
+    <span class="update">Last updated: 2015/08/30</span>
+    <a href="Boxes/boxes.html"><img src="Boxes/pusheen_internet_wiggle.gif"></a>
+    <span class="bitTitle">Let's find photos together!</span>
+  </li>
 
-<div class="codeBit" id="catBush">
-  <h3>2014 March 28</h3>
-  <span class="update">Last updated: 2015/08/27</span>
-  <a href="Find_the_Cat/find_the_cat.html"><img src="Find_the_Cat/fence_with_bushes.png"></a>
-  <span class="bitTitle">Play hide-and-seek with me!</span>
-</div>
+  <li class="codeBit" id="catBush">
+    <h3>2014 March 28</h3>
+    <span class="update">Last updated: 2015/08/27</span>
+    <a href="Find_the_Cat/find_the_cat.html"><img src="Find_the_Cat/fence_with_bushes.png"></a>
+    <span class="bitTitle">Play hide-and-seek with me!</span>
+  </li>
 
-<div class="codeBit" id="calculator">
-  <h3>2015 Aug 30</h3>
-  <span class="update">Last updated: 2015/09/01</span>
-  <a href="Calculator/calculator.html"><img src="Calculator/pusheen-wiggle-math.gif"></a>
-  <span class="bitTitle">Let's do some math!</span>
-</div>
+  <li class="codeBit" id="calculator">
+    <h3>2015 Aug 30</h3>
+    <span class="update">Last updated: 2015/09/01</span>
+    <a href="Calculator/calculator.html"><img src="Calculator/pusheen-wiggle-math.gif"></a>
+    <span class="bitTitle">Let's do some math!</span>
+  </li>
 
-
-
-You can put my boolean in a constant cause I'll always be true to you.
+</ul>
 
 <div class="codeBit" id="bubbleWrap">
   <h3>2014 November 09</h3>
@@ -155,6 +145,8 @@ You can put my boolean in a constant cause I'll always be true to you.
   </form>
   <div class="makeBubbles"></div>
 </div>
+
+You can put my boolean in a constant cause I'll always be true to you.
 
 
 
@@ -167,11 +159,11 @@ You can put my boolean in a constant cause I'll always be true to you.
 <!--page content-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bubbleWrap.js"></script>
-<script src="js/main.js"></script>
+<script src="Index/js/jquery-1.11.1.min.js"></script>
+<script src="Index/js/bubbleWrap.js"></script>
+<script src="Index/js/main.js"></script>
 <script src="Weather_Bar/weather-bar.js"></script>
-<script src="js/petPoke.js"></script>
+<script src="Index/js/petPoke.js"></script>
 
 
 </body>
