@@ -1,0 +1,16 @@
+.row div {
+  outline: 1px solid mediumpurple;
+  border: 1px solid mediumpurple;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+
+.selected.human {
+  background-image: url("assets/human.jpg");
+}
+
+.selected.cat {
+  background-image: url("assets/cat.jpg");
+}

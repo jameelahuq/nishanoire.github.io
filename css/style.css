@@ -1,0 +1,306 @@
+/*font-family: "Trebuchet MS",helvetica,arial,sans-serif;*/
+body {
+	font-family: garamond,times,serif;
+	font-size: 16px;
+	color: #ffff99;
+	padding-left: 15px;
+	background-color: #000;
+}
+
+h3 {
+	font-size: 1.3em;
+  margin-top: 2em;
+  font-weight: bold;
+
+}
+
+img {
+	border-radius: 6px;
+}
+
+/*navigation bar elements*/
+.navBar h2 {
+	font-size: 28px;
+}
+
+.headerBar {
+	background-image: url("../background.jpg");
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.nameBar h1 {
+	font-size: 52px;
+	font-weight:bold;
+}
+
+.navBar {
+	margin-left: 40px;
+}
+
+.navBar a {
+	font-size: 18px;
+	color: #ffff99;
+	font-family: helvetica,arial,sans-serif;
+}
+
+.navBar li {
+	display: inline-block;
+}
+
+
+
+/*weather bar elements*/
+#cityState {
+	font-size: 30px;
+	margin-bottom: 3px;
+}
+
+.dayOfWeek {
+	font-weight: bolder;
+}
+
+.tempAndHumid {
+	font-family: helvetica, arial, sans-serif;
+}
+
+#nowWeatherBox .tempAndHumid {
+	font-size: 15px;
+}
+
+#nowWeatherBox .humid {
+	float: right;
+	margin-left: 15px;
+}
+
+#nowWeatherBox img {
+	width: 75px;
+	vertical-align: middle;
+}
+
+#nowWeatherBox .weatherStats {
+	display: inline-block;
+	position: relative;
+	top: 20px;
+}
+
+#findWeather {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+#forecastArrow.open {
+	transition: transform 0.6s;
+	transform: rotate(180deg);
+}
+
+#forecastArrow.close {
+  transition: transform 0.6s;
+  transform: rotate(360deg);
+}
+
+#threeDayForecast {
+	margin-top: 5px;
+
+}
+
+#threeDayForecast img {
+	width: 75px;
+}
+
+.threeDayDay {
+	display: inline-block;
+	background-color: #221144;
+	padding: 10px;
+  border-radius: 5px;
+
+}
+
+#forecastTab {
+  background-color: #221144;
+  padding: 3px;
+  padding-left: 8px;
+  margin-top: 5px;
+  font-family: helvetica;
+}
+
+
+
+@media (min-width: 700px) {
+	#threeDayForecast {
+		margin-left: 120px;
+	}
+
+  #forecastTab {
+    margin-left: 120px;
+  }
+}
+
+@media (min-width: 470px) {
+	.weatherStats {
+		margin-left: 40px;
+	}
+
+	.threeDayDay {
+		margin-right: 40px;
+	}
+
+
+
+}
+
+@media (max-width: 470px) {
+	#nowWeatherBox {
+		margin-bottom:40px;
+	}
+
+	.threeDayDay {
+		display: block;
+		margin-top: 30px;
+	}
+}
+
+a img {
+  height: 150px;
+  width: auto;
+}
+
+
+/*index page elements */
+.assignments h2 {
+	font-size:28px;
+	font-style: oblique;
+	padding: 10px;
+	background-color: #214;
+	margin-top:15px;
+}
+
+
+.assignments h3 {
+	margin-bottom: 10px;
+}
+
+.assignments p {
+	margin-bottom:10px;
+}
+
+.assignments a:visited {
+  color: inherit;	
+}
+
+.assignments a:hover {
+	color: #757;
+}
+
+.assignments ol {
+	list-style-type: katakana;
+	margin-left:25px;
+
+}
+.siteList li {
+	display:block;
+}
+
+
+.portElement{
+  background-color: #111111;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.portElement h2 {
+	margin-bottom: 10px;
+}
+
+.portElement li {
+	font-family: helvetica,arial,sans-serif;
+}
+
+
+/*codeBit style*/
+.update, .bitTitle {
+	display: block;
+	margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  color: #333300;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  border: solid 2px #000;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.results {
+	color: #000;
+	background-color: #fff;
+	border-radius: 30px;
+	overflow: hidden;
+	display: inline-block;
+	font-family: helvetica,arial,sans-serif;
+}
+
+#petPoke .results {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  padding: 10px;
+
+}
+
+/* bubble wrap */
+#bubbleWrap .makeBubbles div {
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	width: 50px;
+  height: 50px;
+	position: relative;
+	border: solid 2px #000;
+	opacity: .7;
+}
+
+
+#bubbleWrap form {
+	display: inline;
+}
+
+#bubbleWrap form input {
+	width: auto;
+	padding: 2px;
+}
+
+#bubbleWrap .create
+ {
+	border-radius: 0px;
+	width: auto;
+	padding: 4px;
+	height: auto;
+	display: inline;
+}
+
+/*Poke My Cat*/
+
+#petPoke img {
+	/*margin-top: 100px;
+	text-align: center; */
+	width: 180px;
+}
+
+@media (max-width: 360px) {
+	#petPoke img {
+		width: 50%;
+	}
+}
