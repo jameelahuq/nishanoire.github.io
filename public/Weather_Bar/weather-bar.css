@@ -1,9 +1,111 @@
-#icons {
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
+/*weather bar elements*/
+#cityState {
+  font-size: 30px;
+  margin-bottom: 3px;
 }
 
-body {
-  background-color: red;
+.dayOfWeek {
+  font-weight: bolder;
+}
+
+.tempAndHumid {
+  font-family: helvetica, arial, sans-serif;
+}
+
+#nowWeatherBox .tempAndHumid {
+  font-size: 15px;
+}
+
+#nowWeatherBox .humid {
+  float: right;
+  margin-left: 15px;
+}
+
+#nowWeatherBox img {
+  width: 75px;
+  vertical-align: middle;
+}
+
+#nowWeatherBox .weatherStats {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+}
+
+#findWeather {
+  display: inline-block;
+  margin-top: 10px;
+  /*position: absolute;*/
+  /*right: 0;*/
+}
+
+#forecastTab {
+  background-color: #221144;
+  padding: 3px;
+  padding-left: 8px;
+  margin-top: 5px;
+  font-family: helvetica;
+}
+
+#forecastArrow.open {
+  transition: transform 0.6s;
+  transform: rotate(180deg);
+}
+
+#forecastArrow.close {
+  transition: transform 0.6s;
+  transform: rotate(360deg);
+}
+
+#threeDayForecast {
+  margin-top: 5px;
+
+}
+
+#threeDayForecast img {
+  width: 75px;
+}
+
+@media (min-width: 700px) {
+  #forecastTab {
+    margin-left: 120px;
+  }
+
+  #threeDayForecast {
+    margin-left: 120px;
+  }
+}
+
+.threeDayDay {
+  display: inline-block;
+  background-color: #221144;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+@media (min-width: 470px) {
+  .weatherStats {
+    margin-left: 40px;
+  }
+
+  .threeDayDay {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 470px) {
+  #nowWeatherBox {
+    margin-bottom:40px;
+  }
+
+  .threeDayDay {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+a img {
+  height: 150px;
+  width: auto;
 }

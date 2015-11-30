@@ -33,7 +33,7 @@ function init() {
 
 var initializeWeather = function (){
   var promiseHere = $.ajax({
-    url: "http://api.wunderground.com/api/3a5cfa6be0748f06/geolookup/q/autoip.json",
+    url: "https://api.wunderground.com/api/3a5cfa6be0748f06/geolookup/q/autoip.json",
     method: 'GET'
   });
 
@@ -85,11 +85,11 @@ var displayForecast = function(data) {
     console.log('success data: ', data);
   $('.threeDayDay').toArray().forEach(function(e, i) {
     //TODO: Record each element into an array upon initialization.
-    $(e).find(".dayOfWeek").text(data.forecast.simpleforecast.forecastday[i+1].date.weekday)
+    $(e).find(".dayOfWeek").text(data.forecast.simpleforecast.forecastday[i+1].date.weekday);
     $(e).find("img").attr("src", data.forecast.simpleforecast.forecastday[i+1].icon_url);
     //$(e).find('#cityState').text(city.replace("_", " ") +  ", " + state);
     $(e).find('.temp').text(data.forecast.simpleforecast.forecastday[i+1].low.celsius
-        + " C - " + data.forecast.simpleforecast.forecastday[i+1].high.celsius + " C");
+        + "ºC - " + data.forecast.simpleforecast.forecastday[i+1].high.celsius + "ºC");
     $(e).find('.humid').text(data.forecast.simpleforecast.forecastday[i+1].avehumidity + "%");
   });
 };
