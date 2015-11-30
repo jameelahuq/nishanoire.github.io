@@ -28,68 +28,25 @@ var cookieMonsterWill =  {
   }
 };
 
-$(function() {
-  var $module = $('#catHumanLaser');
 
-  $module.find('.results .text').text("Choose your weapon!");
 
-  $module.on("click", ".userChoice button", function() {
-    $module.find(".computerChoice button").removeClass("picked");
-    var computerChoice = Math.random();
-    if (computerChoice >= 0 && computerChoice < 0.33) {
-      computerChoice = "cat";
-    } else if (computerChoice >= 0.33 && computerChoice < 0.67) {
-      computerChoice = "human";
-    } else {
-      computerChoice = "laser";
-    }
+//--------------MERRY-GO-ROUND-----------------------
+//$(function() {
+//
+//$("#merryGoRound").on("click", "button", function () {
+//    var counter = 0;
+//    do {
+//      var spinAgain = confirm("Want to go again?");
+//      counter ++;
+//    } while (spinAgain);
+//    $("#merryGoRound .results").text("You spun " + counter + " times!");
+//  });
+//
+//
+//
+//});
 
-    $module.find('.' + computerChoice).addClass("picked");
 
-    var userChoice = $(this).data("choice");
-
-        if (userChoice === computerChoice) {
-          if (userChoice === "cat") {
-            displayResult("Kitty Party!!!", computerChoice);
-          } else {
-            displayResult("Stalemate...", computerChoice);
-          } 
-        } else if (userChoice === "cat") {
-          if (computerChoice === "human") {
-            displayResult("You Win!", computerChoice);
-          } else if (computerChoice === "laser") {
-            displayResult("You Lose :(", computerChoice);
-          } 
-        } else if (userChoice === "human") {
-          if (computerChoice === "laser") {
-            displayResult("You Win!", computerChoice);
-          } else if (computerChoice === "cat") {
-            displayResult("You Lose", computerChoice);
-          } 
-        } else if (userChoice === "laser") {
-          if (computerChoice === "cat") {
-            displayResult("You Win!", computerChoice);
-          } else if (computerChoice === "human") {
-            displayResult("You Lose", computerChoice);
-          } 
-        }
-
-       $module.find(".results img").attr('src', 'images/' + userChoice + '-' + computerChoice + '.jpg');
-  });
-
-$("#merryGoRound").on("click", "button", function () {
-    var counter = 0;
-    do {
-      var spinAgain = confirm("Want to go again?");
-      counter ++;
-    } while (spinAgain);
-    $("#merryGoRound .results").text("You spun " + counter + " times!");
-  });
-});
-
-var displayResult = function (textResult, computerChoice) {
-  $("#catHumanLaser .results .text").text("Your opponent chose " + computerChoice + "... " + textResult);
-};
 
  
 

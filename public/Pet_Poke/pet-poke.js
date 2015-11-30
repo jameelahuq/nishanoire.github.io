@@ -3,16 +3,16 @@
 	var petPicElement = document.getElementById('petPic');
 	var $results = $("#petPoke .results");
 	var petPic = {
-		okCat: 'images/pusheen-wiggle.gif',
-		happyCat: 'images/pusheen-wiggle-wink.gif',
-		sadCat: 'images/pusheen-wiggle-sad.gif',
-		cookieCat: 'images/pusheen-wiggle-cookies.gif'
+		okCat: 'Pet_Poke/images/pusheen-wiggle.gif',
+		happyCat: 'Pet_Poke/images/pusheen-wiggle-wink.gif',
+		sadCat: 'Pet_Poke/images/pusheen-wiggle-sad.gif',
+		cookieCat: 'Pet_Poke/images/pusheen-wiggle-cookies.gif'
 	};
 
 
 	function changeToPetPic (image) {
 		petPicElement.src = image;
-		
+
 	}
 
 	function petPet () {
@@ -37,19 +37,19 @@
 	}
 
 	function greetUser () {
-	  ownerName = cookieMonsterWill.findCookie("petpoke_ownername");
-	  if (ownerName && navigator.cookieEnabled) {
-		$results.text(ownerName + "! You're back! I missed you!");
-		changeToPetPic(petPic.okCat);
-	  }
-	  else 
-		$results.text("Pet me?");
+		ownerName = cookieMonsterWill.findCookie("petpoke_ownername");
+		if (ownerName && navigator.cookieEnabled) {
+			$results.text(ownerName + "! You're back! I missed you!");
+			changeToPetPic(petPic.okCat);
+		}
+		else
+			$results.text("Pet me?");
 	}
 
 	$(function() {
-	  greetUser();
-	  //alert('Scroll down to see your new pet!')
-	  $('#petPoke').on("click", "#petPic", petPet);
+		greetUser();
+		//alert('Scroll down to see your new pet!')
+		$('#petPoke').on("click", "#petPic", petPet);
 	});
 
 }) ();
