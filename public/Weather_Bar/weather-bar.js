@@ -33,7 +33,7 @@ function init() {
 
 var initializeWeather = function (){
   var promiseHere = $.ajax({
-    url: "http://api.wunderground.com/api/3a5cfa6be0748f06/geolookup/q/autoip.json",
+    url: "https://api.wunderground.com/api/3a5cfa6be0748f06/geolookup/q/autoip.json",
     method: 'GET'
   });
 
